@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './template-binding.component.scss'
 })
 export class TemplateBindingComponent {
-  public name = 'Dener Troquatte';
+  public name = 'Marconcilio Souza';
   public age = 16;
   public condition = this.age > 18 ? "Maior de idade" : "Menor de idade";
   public isDisable = true;

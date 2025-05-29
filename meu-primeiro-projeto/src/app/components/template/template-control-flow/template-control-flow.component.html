@@ -1,1 +1,75 @@
 <h2>Control Flow</h2>
+<h3>IF</h3>
+
+<!-- Nova Forma -->
+@if(isTrue)
+{
+<p>Exemplo com condição if</p>
+}
+@else {
+<p>Exemplo com condição else</p>
+}
+
+<hr>
+<!-- Forma Antiga -->
+<ng-container *ngIf="isTrue">
+    <p>Exemplo com condição if</p>
+</ng-container>
+<ng-template *ngIf="!isTrue">
+    <p>Exemplo com condição else</p>
+</ng-template>
+
+<hr>
+
+<h3>For</h3>
+
+@if(loadingData$ | async; as data)
+{
+<ul>
+    @for(item of data; track item){
+    <li>{{item}}</li>
+    }
+</ul>
+}
+@else {
+<p>Carregando .... </p>
+}
+
+<hr />
+
+@for (item of itens; track item.name;
+let i = $index;
+let c = $count;
+let f = $first;
+let l = $last;
+let e = $even;
+let o = $odd;
+) {
+<p>{{item.name}}</p>
+<p>index - {{i}}</p>
+<p>count - {{c}}</p>
+<p>first - {{f}}</p>
+<p>last - {{l}}</p>
+<p>even - {{e}}</p>
+<p>odd - {{o}}</p>
+}@empty {
+    <li>Não contém valores</li>
+}
+
+<input #name>
+<button (click)="AddNewName(name.value)">Add Name</button>
+
+
+<hr>
+@switch (switchCondition) {
+    @case ('A') { 
+        <p>Letra A</p>
+    }
+    @case ('B') { 
+        <p>Letra B</p>
+    }
+
+    @default {
+        <p>Letra inválida!</p>
+    }
+}
