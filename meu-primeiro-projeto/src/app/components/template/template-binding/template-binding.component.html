@@ -1,0 +1,44 @@
+<h2>template-binding works!</h2>
+<h3>Text Interpolation</h3>
+<p>Nome : {{ name }},  Idade: {{age}}</p>
+<p>Condição: {{ condition }}</p>
+<hr />
+
+<h2>Property binding</h2>
+<button [disabled]="isDisable">Button</button>
+<img [src]="srcValue" width="200" height="150" [alt]="name" [title]="name" />
+
+<hr />
+<h2>Atribute binding</h2>
+<p [attr.title]="name" [attr.aria-label]="name">Dener Troquatte</p>
+
+<hr />
+
+<h2>Class and Style binding</h2>
+<p [class.background-red]="age < 18" [class.background-blue]="age > 18">{{name}}</p>
+<p [style.text-decoration]="isTextDecoration">{{age}}</p>
+<hr />
+
+<h2>Event binding</h2>
+
+<button (click)="increment_age();">+</button>
+<button (click)="decrement_age();">-</button>
+<input (keydown.shift.t)="onKeyDown($event)" type="text">
+<div 
+    style="background: red; width: 300px; height: 30px; margin-top: 10px"
+    (mousemove)="onMouseMove($event)"
+    >
+</div>
+<hr />
+<h2>Two-way binding</h2>
+<input [(ngModel)]="name"/>
+{{name}}
+
+<hr />
+<h2>Diretivas de atributo</h2>
+<div [ngClass]="{'background-red': true}">Classes Condicionais</div>
+<div [ngStyle]="{
+    color: age > 20 ? 'green' : 'red',
+    'font-size': age > 20 ? '30px' : '50px',
+    }"
+>Estilos Dinâmico</div>
