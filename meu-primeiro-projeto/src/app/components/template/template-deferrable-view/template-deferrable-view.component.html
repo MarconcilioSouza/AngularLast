@@ -1,0 +1,19 @@
+<h2>Deferrable Views</h2>
+<!-- Faz o carregamento depois que toda a página é carregada -->
+<!-- metodos -->
+<!-- idle padrão -->
+<!-- viewport -->
+<!-- timer -->
+<!-- interaction -->
+<!-- houver -->
+<!-- immediate -->
+<!-- prefecth -->
+@defer (on timer(5s)) {
+<app-new />
+}@placeholder {
+<p>Mostrar antes de carregar algo.</p>
+}@loading {
+<p>Loaging...</p>
+}@error {
+<p>Loading failed</p>
+}
