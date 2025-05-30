@@ -21,6 +21,7 @@ import { TemplateDeferrableViewComponent } from "./components/template/template-
 ],
   template: `
   <h1>Curso de Angular</h1>
+  <!-- <app-new /> -->
   <!-- <app-template-binding /> -->
   <!-- <app-template-variables /> -->
    <!-- <app-template-control-flow /> -->
